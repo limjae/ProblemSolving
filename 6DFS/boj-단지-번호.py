@@ -1,5 +1,5 @@
 # https://www.acmicpc.net/problem/2667
-
+# DFS로 해결
 
 count = int(input())
 

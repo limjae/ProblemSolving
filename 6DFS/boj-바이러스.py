@@ -1,4 +1,6 @@
 # https://www.acmicpc.net/problem/2606
+# DFS로 해결
+
 from collections import defaultdict
 
 nodes = int(input())
