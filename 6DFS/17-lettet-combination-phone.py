@@ -21,12 +21,15 @@ class Solution:
             tmp = []
 
             for combination in answer:
-                for char in list(phonedict[num]):
+                for char in phonedict[num]:
                     tmp.append(combination + char)
 
             answer = tmp
 
         return answer
+
+solution = Solution()
+print(solution.letterCombinations("23"))
 
 
 class Solution:
