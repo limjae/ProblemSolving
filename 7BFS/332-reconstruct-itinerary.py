@@ -74,3 +74,23 @@ class Solution:
 
 # [["JFK","KUL"],["JFK","NRT"],["NRT","JFK"]] 주의
 
+# 85~141ms
+class Solution:
+    def findItinerary(self, tickets: List[List[str]]) -> List[str]:
+        airlines = defaultdict(set)
+
+        ticket_count = len(tickets)
+        for ticket in sorted(tickets):
+            airlines[ticket[0]].add(ticket[1])
+
+        queue = deque()
+        queue.append("JFK")
+        while queue:
+            path = queue.popleft()
+            if len(path) == ticket_count:
+                return path
+            else:
+                for i, path_to in enumerate(airlines[path[-1]]):
+                    queue.append(path + [path_to])
+
+        return False

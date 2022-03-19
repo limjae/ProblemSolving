@@ -18,19 +18,19 @@ class Solution:
         def DFS(course):
             visited[course] = True
 
-            for require in directed_graph[course]:
-                if finished[require]:
+            for link in directed_graph[course]:
+                if finished[link]:
                     continue
-                elif visited[require]:
+                elif visited[link]:
                     return False
-                if not DFS(require):
+                elif not DFS(link):
                     return False
 
             finished[course] = True
             return True
 
-        for course_num in range(numCourses):
-            if not visited[course_num] and not DFS(course_num):
+        for course_index in range(numCourses):
+            if not visited[course_index] and not DFS(course_index):
                 return False
         return True
 

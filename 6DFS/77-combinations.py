@@ -14,3 +14,22 @@ class Solution:
                 answer += self.DFS(left - 1, n+1, list(result) + [i])
             return answer
 
+
+class Solution:
+    def combine(self, n: int, k: int) -> List[List[int]]:
+        stack = []
+        answer = []
+        for i in range(1, n+1, -1):
+            stack.append([i])
+
+        while stack:
+            top = stack.pop
+            if len(top) == k:
+                answer.append(top)
+                continue
+
+            for i in range(top[-1] + 1 , n+1, -1):
+                stack.append( top + [i] )
+
+        return answer
+
