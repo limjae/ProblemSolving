@@ -2,6 +2,7 @@
 numbers = int(input())
 answer = []
 
+
 def DFS(target_left):
     if target_left == 0:
         return 1
