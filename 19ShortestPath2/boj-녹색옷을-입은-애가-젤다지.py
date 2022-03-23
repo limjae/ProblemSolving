@@ -1,7 +1,6 @@
 # https://www.acmicpc.net/problem/4485
 import sys
 import heapq
-from collections import defaultdict
 input = sys.stdin.readline
 
 n = int(input())

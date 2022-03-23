@@ -1,27 +1,33 @@
 # https://leetcode.com/problems/cheapest-flights-within-k-stops/
-# dijkstra 미해결
 import copy
 from typing import *
+from collections import defaultdict
 import heapq
+
+
 # dijkstra
 class Solution:
     def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, k: int) -> int:
-        graph = collections.defaultdict(dict)
+        graph = defaultdict(list)
         for s, d, w in flights:
-            graph[s][d] = w
-        pq = [(0, src, k + 1)]
-        vis = [0] * n
-        while pq:
-            w, x, k = heapq.heappop(pq)
-            if x == dst:
-                return w
-            if vis[x] >= k:
-                continue
-            vis[x] = k
-            for y, dw in graph[x].items():
-                heapq.heappush(pq, (w + dw, y, k - 1))
-        return -1
+            graph[s].append((d, w))
+        pq = [(0, src, 0)]
+        # w, k
+        dist = [[9999999, n] for _ in range(n)]
 
+        while pq:
+            distance, node, path = heapq.heappop(pq)
+            if node == dst:
+                return distance
+            print(distance, node, path, dist[node][1])
+            if path <= k and path < dist[node][1]:
+                dist[node][0] = min(dist[node][0], distance)
+                dist[node][1] = min(dist[node][1], path)
+                for v, w in graph[node]:
+                    alt = distance + w
+                    heapq.heappush(pq, (alt, v, path + 1))
+
+        return -1
 
 # ballmanford
 class Solution:
