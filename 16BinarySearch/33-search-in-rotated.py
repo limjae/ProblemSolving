@@ -8,12 +8,21 @@ class Solution:
         start = 0
         end = nums_length-1
 
-        while start <= end:
+        while end - start > 1:
             mid = (start + end) // 2
-            for i in arr:
-                cur += max(i - mid, 0)
 
-            if cur < limit:
-                end = mid - 1
+            # start ~ mid까지 정렬
+            if nums[start] < nums[mid]:
+                if nums[start] <= target <= nums[mid]:
+                    end = mid
+                else:
+                    start = mid
+            # mid ~ end까지 정렬
             else:
-                start = mid + 1
+                if nums[mid] <= target <= nums[end]:
+                    start = mid
+                else:
+                    end = mid
+
+        return end if target == nums[end] else start if target == nums[start] else -1
+
