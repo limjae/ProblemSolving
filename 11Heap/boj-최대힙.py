@@ -12,5 +12,5 @@ for _ in range(length):
             answer.append(0)
     else:
         heappush(heap1, -data)
-
+        
 print("\n".join([str(i) for i in answer]), end="")

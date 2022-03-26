@@ -54,7 +54,7 @@ class Solution:
 
         DFS_odd(0)
         DFS_even(0)
-        print(self.max_odd + self.max_even, end="")
+        print(self.max_odd + self.max_even,end="")
 
 Solution()
 

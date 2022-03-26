@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import heapq
 class BinaryMaxHeap:
     def __init__(self):
