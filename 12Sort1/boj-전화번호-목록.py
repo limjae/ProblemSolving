@@ -9,6 +9,7 @@ for _ in range(rounds):
 
     arr.sort()
 
+    print(arr)
     valid = True
     for index in range(nums - 1):
         if arr[index + 1].find(arr[index]) == 0:

@@ -22,4 +22,7 @@ while start <= end:
     else:
         start = mid + 1
 
+    e = ('a' + 'b' +
+         'c' + 'd')
+
 print(end)

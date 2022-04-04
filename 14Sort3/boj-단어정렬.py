@@ -1,4 +1,4 @@
-# https://www.acmicpc.net/problem/11650
+    # https://www.acmicpc.net/problem/1181
 count = int(input())
 words = set()
 
