@@ -15,7 +15,6 @@ distances = [[9999999 for _ in range(n)] for _ in range(n)]
 for node_num in range(n):
     for edge in graph[node_num]:
         distances[node_num][edge[0]] = edge[1]
-    distances[node_num][node_num] = 0
 
 for k in range(n):
     for i in range(n):
@@ -26,9 +25,12 @@ for k in range(n):
 
 min_distance = 9999999
 for start in range(n):
-    for via in range(n):
-        if start == via:
-            continue
-        min_distance = min(min_distance, distances[start][via] + distances[via][start])
+    min_distance = min(min_distance, distances[start][start])
+#     not need 2x for loop
+# for start in range(n):
+#     for via in range(n):
+#         if start == via:
+#             continue
+#         min_distance = min(min_distance, distances[start][via] + distances[via][start])
 
 print(-1 if min_distance == 9999999 else min_distance, end="")
