@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PersonalSolving_Java/PersonalSolving_Java.iml" filepath="$PROJECT_DIR$/PersonalSolving_Java/PersonalSolving_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/PersonalSolving_Java.iml" filepath="$PROJECT_DIR$/Java/PersonalSolving_Java.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Week1.iml" filepath="$PROJECT_DIR$/.idea/Week1.iml" />
       <module fileurl="file://$PROJECT_DIR$/pythonModule/pythonModule.iml" filepath="$PROJECT_DIR$/pythonModule/pythonModule.iml" />
     </modules>
