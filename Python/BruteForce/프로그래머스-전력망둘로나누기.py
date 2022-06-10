@@ -3,12 +3,13 @@
 from collections import defaultdict
 from collections import deque
 
+
 def solution(n, wires):
     answer = n
 
     connect_dict = defaultdict(set)
-    child_net = [ list() for _ in range(n) ]
-    node_set = set([i for i in range(1, n+1)])
+    child_net = [list() for _ in range(n)]
+    node_set = set([i for i in range(1, n + 1)])
 
     for connection in wires:
         connect_dict[connection[1]].add(connection[0])
@@ -47,7 +48,4 @@ def solution(n, wires):
         connect_dict[connection[1]].add(connection[0])
         connect_dict[connection[0]].add(connection[1])
 
-
     return answer
-
-
