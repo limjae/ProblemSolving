@@ -1,4 +1,7 @@
 # https://leetcode.com/problems/sort-colors/
+from typing import List
+
+
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         color_count = [0 for _ in range(3)]
