@@ -12,7 +12,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int setLength = Integer.parseInt(br.readLine());
-        StringTokenizer st =new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
         for(int i = 0; i< setLength;++i){
             cardSet.add(Integer.parseInt(st.nextToken()));
         }
