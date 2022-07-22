@@ -13,8 +13,9 @@ public class Main {
 
         String[] numbers = br.readLine().split(" ");
 
-        int[] ints = Arrays.stream(numbers).mapToInt(Integer::parseInt).distinct().sorted().toArray();
-        System.out.println(String.join(" ",Arrays.stream(ints).mapToObj(Integer::toString).toArray(String[]::new)));
-
+        System.out.println(String.join(" ",
+                Arrays.stream(br.readLine().split(" "))
+                        .mapToInt(Integer::parseInt).distinct().sorted()
+                        .mapToObj(Integer::toString).toArray(String[]::new)));
     }
 }
