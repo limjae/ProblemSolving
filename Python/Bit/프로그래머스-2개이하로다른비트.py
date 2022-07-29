@@ -9,5 +9,5 @@ def solution(numbers):
             if last == 0:
                 answer.append(num + 2**(len(bin(num)) - 3))
             else:
-                answer.append(num + 2**(len(bin(num))  - last - 2))
+                answer.append(num + 2**(len(bin(num)) - last - 2))
     return answer
