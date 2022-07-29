@@ -6,6 +6,7 @@ class Solution {
     public String solution(String[] participant, String[] completion) {
         String answer = "";
         Marathon marathon = new Marathon();
+
         Arrays.stream(participant).forEach(marathon::addParticipant);
         Arrays.stream(completion).forEach(marathon::completeParticipant);
         return new ArrayList<>(marathon.getNotCompleted()).get(0);
