@@ -26,7 +26,6 @@ class Solution {
             dayPassed += 1;
         }
 
-        List<Integer> integers = answer.stream().map(Integer::intValue).toList();
         return answer.stream().mapToInt(Integer::intValue).toArray();
     }
 }
