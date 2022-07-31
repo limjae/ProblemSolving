@@ -9,6 +9,7 @@ class Solution {
         System.out.println(min);
         System.out.println(max);
 
+        Boolean[] visited = new Boolean[n];
         while (min < max){
             Long mid = Math.floorDiv(min+max, 2);
             Long passedPeople = getPassAvailable(mid, times);
