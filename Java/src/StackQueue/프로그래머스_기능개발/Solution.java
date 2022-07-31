@@ -1,4 +1,4 @@
-package Stack.프로그래머스_기능개발;
+package StackQueue.프로그래머스_기능개발;
 
 import java.util.*;
 

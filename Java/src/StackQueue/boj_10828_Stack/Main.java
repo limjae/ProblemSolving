@@ -1,4 +1,4 @@
-package Stack.boj_10828_Stack;
+package StackQueue.boj_10828_Stack;
 //https://www.acmicpc.net/problem/10828
 
 import java.io.BufferedReader;
