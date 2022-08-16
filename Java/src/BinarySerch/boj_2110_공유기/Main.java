@@ -32,16 +32,28 @@ public class Main {
                     prev = datas.get(i);
                 }
             }
+            // 최대값 찾기
+//            if(count >= switchSize){
+//                left = mid + 1;
+//            }
+//            else {
+//                right = mid - 1;
+//            }
 
-            if(count >= switchSize){
-                left = mid + 1;
+            // 최소값 찾기
+            if(count <= switchSize){
+                right = mid - 1;
             }
             else {
-                right = mid - 1;
+                left = mid + 1;
             }
 
         }
 
+        //최대값
         System.out.println(right);
+
+        //최소값
+        System.out.println(left);
     }
 }
