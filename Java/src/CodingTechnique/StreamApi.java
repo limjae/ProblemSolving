@@ -24,6 +24,7 @@ public class StreamApi {
         // nameStream.forEach(System.out::println);
 
         create();
+        modify();
     }
 
     public static void create(){
@@ -46,19 +47,37 @@ public class StreamApi {
     public static void modify(){
         List<String> stringList = Arrays.asList("a", "b", "c", "a", "b1", "abc");
 
-        Stream<String> filterStream = stringList.stream().filter(name -> name.contains("a"));
-        Stream<String> mapStream = stringList.stream().map(String::toUpperCase);
+        stringList.stream().filter(name -> name.contains("a")).forEach(System.out::print);
+        System.out.println();
 
-        Stream<String> sortedStream1 = stringList.stream().sorted();
-        Stream<String> sortedStream2 = stringList.stream().sorted(new CustomComparator<>());
-        Stream<String> sortedStream3 = stringList.stream().sorted(new Comparator<String>() {
+        stringList.stream().map(String::toUpperCase).forEach(System.out::print);
+        System.out.println();
+
+
+        stringList.stream().sorted().forEach(System.out::print);
+        System.out.println();
+
+        stringList.stream().sorted(new CustomComparator<>()).forEach(System.out::print);
+        System.out.println();
+
+        stringList.stream().sorted(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return 0;
             }
-        });
+        }).forEach(System.out::print);
+        System.out.println();
 
+        stringList.stream().sorted(Comparator.naturalOrder()).forEach(System.out::print);
+        System.out.println();
 
+        //equals와 hashCode가 필요함
+        stringList.stream().distinct().forEach(System.out::print);
+        System.out.println();
+
+        // peek는 중간처리자, for each는 결과처리자
+        stringList.stream().peek(System.out::print).distinct().forEach(System.out::print);
+        System.out.println();
     }
 }
 
