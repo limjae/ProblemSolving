@@ -1,5 +1,7 @@
 package CodingTechnique;
 
+import java.util.stream.Stream;
+
 public class StringAndStringBuilder {
     public static void main(String[] args) {
         String string = "abc";
@@ -21,6 +23,8 @@ public class StringAndStringBuilder {
         System.out.println("sb.toString() = " + sb.toString());
         System.out.println("sbuf.toString() = " + sbuf.toString());
 
+        StringBuilder stringBuilder = new StringBuilder(string);
+        System.out.println("stringBuilder.reverse() = " + stringBuilder.reverse());
 
         sb.reverse();
 
