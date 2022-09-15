@@ -88,3 +88,11 @@ class CustomComparator<String> implements Comparator{
         return 0;
     }
 }
+
+class CustomClass implements Comparable<CustomClass>{
+    private Long a;
+    @Override
+    public int compareTo(CustomClass o) {
+        return (int) (this.a - o.a);
+    }
+}
