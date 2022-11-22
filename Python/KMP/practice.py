@@ -25,7 +25,7 @@ def fail_function(pattern):
 
     return rollback_list
 
-
+# O(pattern + Text)
 def KMP(pattern, txt):
     rollback_list = fail_function(pattern)
 
